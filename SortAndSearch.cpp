@@ -1,4 +1,4 @@
-1. Сортировка выбором (Selection Sort) - C++
+//1. Сортировка выбором (Selection Sort) - C++
 #include <iostream>
 #include <vector>
 
@@ -15,7 +15,7 @@ void selectionSort(std::vector<int>& arr) {
     }
 }
 
-3. Сортировка вставками (Insertion Sort) - C++
+//3. Сортировка вставками (Insertion Sort) - C++
 #include <iostream>
 #include <vector>
 
@@ -32,7 +32,7 @@ void insertionSort(std::vector<int>& arr) {
     }
 }
 
-4. Сортировка слиянием (Merge Sort) - C++
+//4. Сортировка слиянием (Merge Sort) - C++
 #include <iostream>
 #include <vector>
 
@@ -48,7 +48,7 @@ void mergeSort(std::vector<int>& arr, int left, int right) {
     merge(arr, left, mid, right);
 }
 
-7. Пирамидальная сортировка (Heap Sort) - C++
+//7. Пирамидальная сортировка (Heap Sort) - C++
 #include <iostream>
 #include <vector>
 
