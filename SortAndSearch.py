@@ -1,4 +1,4 @@
-##Сортировка пузырьком - Python
+#Сортировка пузырьком - Python
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n-1):
@@ -11,7 +11,7 @@ print("Исходный массив:", *arr)
 bubble_sort(arr)
 print("Отсортированный массив:", *arr)
 
-##Сортировка Шелла (Shell Sort) - Python
+#Сортировка Шелла (Shell Sort) - Python
 def shell_sort(arr):
     n = len(arr)
     gap = n // 2
@@ -25,7 +25,7 @@ def shell_sort(arr):
             arr[j] = temp
         gap //= 2
 
-##Быстрая сортировка (Quick Sort) - Python
+#Быстрая сортировка (Quick Sort) - Python
   def partition(arr, low, high):
     pivot = arr[high]
     i = low - 1
@@ -42,7 +42,7 @@ def quick_sort(arr, low, high):
         quick_sort(arr, low, pi - 1)
         quick_sort(arr, pi + 1, high)
 
-##Линейный поиск (Linear Search) - Python
+#Линейный поиск (Linear Search) - Python
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
