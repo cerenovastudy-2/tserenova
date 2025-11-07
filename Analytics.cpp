@@ -40,3 +40,37 @@ string reverseStringEfficient(const string& str, int left, int right) {
     }
     
     // Создаем копию строки для модификации
+string result = str;
+    
+    // Меняем симметричные символы местами
+    swap(result[left], result[right]);
+    
+    // Рекурсивно обрабатываем подстроку
+    return reverseStringEfficient(result, left + 1, right - 1);
+}
+
+int main() {
+    string testCases[] = {"hello", "algorithm", "recursion", "a", ""};
+    
+    cout << "=== Рекурсивный реверс строки ===" << endl;
+    
+    for (const string& test : testCases) {
+        string reversed = reverseString(test);
+        cout << "Исходная: \"" << test << "\" -> Перевернутая: \"" << reversed << "\"" << endl;
+    }
+    
+    cout << "\n=== Альтернативная реализация ===" << endl;
+    for (const string& test : testCases) {
+        string reversed = reverseStringIndex(test, test.length() - 1);
+        cout << "Исходная: \"" << test << "\" -> Перевернутая: \"" << reversed << "\"" << endl;
+    }
+    
+    cout << "\n=== Эффективная реализация ===" << endl;
+    for (const string& test : testCases) {
+        string reversed = reverseStringEfficient(test, 0, test.length() - 1);
+        cout << "Исходная: \"" << test << "\" -> Перевернутая: \"" << reversed << "\"" << endl;
+    }
+    
+    return 0;
+}
+
